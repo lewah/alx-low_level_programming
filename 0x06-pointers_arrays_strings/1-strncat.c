@@ -27,4 +27,4 @@ char *_strncat(char *dest, char *src, int n)
 
 	/* return concatenated string */
 	return (dest);
-}
+} 
