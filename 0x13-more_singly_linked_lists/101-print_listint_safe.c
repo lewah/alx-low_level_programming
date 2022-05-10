@@ -6,34 +6,24 @@
  *
  * Return: number of nodes in the list
  */
-size_t free_listint_safe(listint_t **h)
+size_t print_listint_safe(const listint_t *head)
 {
-	listint_t *tmp, *actual;
-	size_t i;
-	int rest;
+	size_t num = 0;
+	long int diff;
 
-	i = 0, actual = *h;
-
-	while (actual)
+	while (head)
 	{
-		rest = actual - actual->next;
-		if (rest > 0)
+		diff = head - head->next;
+		num++;
+		printf("[%p] %d\n", (void *)head, head->n);
+		if (diff > 0)
+			head = head->next;
+		else
 		{
-			tmp = actual->next;
-			free(actual);
-			actual = tmp;
-			i++;
-		} else
-		{
-			free(actual);
-			*h = NULL;
-			i++;
+			printf("-> [%p] %d\n", (void *)head->next, head->next->n);
 			break;
 		}
-
 	}
 
-	*h = NULL;
-
-	return (i);
+	return (num);
 }
