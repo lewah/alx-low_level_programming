@@ -28,9 +28,9 @@ working in the C language. The specific list of projects I have completed so far
 * [0x13. C - More singly linked lists](./0x13-more_singly_linked_lists)
 * [0x15. C - File I/O](./0x15-file_io)
 
-## Author :Lewah:
+## Author :Lewah
 
-* __Ingrid(Lewah)__ <[Lewah]()>
+* __Lewah__ <[Lewah]()>
 
 ## Acknowledgements :pray:
 
